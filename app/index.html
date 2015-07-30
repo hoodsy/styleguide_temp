@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title ng-bind="pageTitle"></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  
+  <!-- 
+      Navbar Component
+      TODO: split into standalone component
+   -->
+  <nav class="navbar {{ $state.current.name | toState }}" ng-class="{{$state.current.name}}">
+    <a ui-sref="root"><img class="navbar-logo" src="images/logo.svg"></a>
+    <ul class="nav">
+      <li>
+        <a ui-sref="guidelines" 
+          ui-sref-active="navbar-active">
+          Our Brand
+        </a>
+      </li>
+      <li>
+        <a ui-sref="ui-design"
+          ui-sref-active="navbar-active">
+          UI Design
+        </a>
+      </li>
+      <li>
+        <a ui-sref="marketing"
+          ui-sref-active="navbar-active">
+          Marketing
+        </a>
+      </li>
+    </ul>
+    <input class="search-bar" type="text"/>
+  </nav>
+
+  <div ui-view></div>
+  
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/*
+** Navbar
+*/
+.navbar {
+	padding: 2.5rem 3rem;
+  
+  min-height: 0;
+  min-height: initial;
+  overflow: auto;
+
+  border-radius: 0;
+  background-color: $midnight;
+  color: white;
+
+	.navbar-logo {
+		padding-right: 10px;
+		width: 6.25rem;
+		float: left;
+	}
+
+  /*
+  ** Nav
+  */
+  .nav {
+  	padding: 0;
+  	margin: 0 auto;
+  	width: 40%;
+  	display: block;
+  }
+
+  .nav > li {
+  	padding: 1rem 2rem 0 0;
+  	float: left;
+  	list-style-type: none;
+  }
+
+  .navbar-active {
+		color: $midnight !important;
+  }
+
+  .nav > li > a {
+  	color: white;
+  	text-decoration: none;
+  	text-transform: uppercase;
+  }
+
+	/*
+	** Search Bar
+	*/
+	.search-bar {
+		width: 20%;
+		padding: 0.5rem 0;
+		border: none;
+		border-bottom: 3px solid white;
+		outline: none;
+		background-color: transparent;
+		font-size: $font-size-medium;
+		float: right;
+	}
+
+}
+
+.marketing {
+	background-color: $citrus;
+}
+.ui-design {
+	background-color: $blue;
+}
+.guidelines {
+	background-color: $teal;
+}

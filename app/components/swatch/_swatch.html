@@ -1,0 +1,11 @@
+<div class="swatch-container">
+	<div class="swatch swatch-{{type}} {{color}}"></div>
+	<div class="labels-container" 
+			 ng-if="labels != undefined">
+		<b>{{ color | capitalizeFirst }}</b>
+		<div class="label" 
+				 ng-repeat="label in labels">
+			{{ label }}
+		</div>
+	</div>
+</div>

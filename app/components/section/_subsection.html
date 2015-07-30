@@ -1,0 +1,35 @@
+<div class="subsection"
+		 ng-init="vm.inTab = 'Usage'">
+	
+	<!-- Subsection header -->
+	<div class="subsection-header">
+		<h3 id='{{title | toSubstate}}' class="subsection-title">
+			{{ title }}
+		</h3>
+		<div class="subsection-tabs">
+			<p class="tab"
+				 ng-repeat="tab in tabs"
+			   ng-click="vm.activeTab(tab)"
+				 ng-class="{tabActive: vm.inTab === tab}">
+				{{ tab }}
+			</p>
+		</div>
+	</div>
+
+	<div class="content">
+	
+		<!-- Subsection views -->
+		<!-- Viewname is added as class for independent styles -->
+		<div ng-repeat="view in content"
+				 class="{{ view.tab }}"
+				 ng-if="vm.inTab === view.tab">
+			<div class="content-assets">
+				<ng-include src="view.assets"/>			
+			</div>
+			<div class="content-description">
+				<ng-include src="view.description"/>
+			</div>
+		</div>
+
+	</div>
+</div>

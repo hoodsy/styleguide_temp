@@ -1,0 +1,57 @@
+/*
+** Sidebar
+*/
+
+.sidebar {
+	height: 100vh;
+	float: left;
+
+	.nav {
+		margin: 0;
+		padding: 50px 75px 0 50px;
+		li { 
+			padding: 0 0 25px 0;
+		}
+	}
+	/*
+	** sub-nav used for sidebar subsections
+	*/
+	.sub-nav {
+		margin: 0;
+		padding: 0 0 0 0; 
+		li { 
+			padding: 25px 0 0 0;
+			
+		}
+		a { 
+			padding: 12.5px 0 12.5px 15px;
+			border-left: 1px solid $gray-lighter;
+		}
+	}
+	.sub-nav,
+	.nav {
+		li {
+			font-size: $font-size-large;
+			color: $midnight;
+			list-style-type: none;
+		}
+	}
+	.sub-nav,
+	.nav a {
+		color: $midnight;
+		text-decoration: none;
+	}
+
+}
+
+/*
+** ui.router state styling
+*/
+.sidebar-active {
+	font-weight: bold;
+	color: $midnight;
+}
+
+.subsectionActive {
+	border-left: 3px solid $citrus !important;
+}

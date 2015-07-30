@@ -1,0 +1,81 @@
+/*
+** Section
+*/
+
+.section {
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+	padding: 50px 5% 5% 10%;
+
+	h1,
+	h2,
+	h3 {
+		color: $gray-light;
+	}
+}
+
+.section-header {
+	margin: 0;
+	font-family: $font-family-heading;
+	font-size: $font-size-h1;
+	text-transform: uppercase;
+}
+
+/*
+** Subsection
+*/
+.subsection {
+	width: 100%;
+	margin: 50px 0 0 0;
+	padding: 0 0 50px 0;
+	border-top: 1px solid $gray-light;
+}
+
+.subsection-header {
+	padding: 0 0 55px 0;
+	h1,
+	h2,
+	h3 {
+		text-transform: uppercase;
+	}
+}
+
+.subsection-title {
+	margin: 15px 0;
+	font-size: $font-size-h3;
+	float: left;
+}
+
+.subsection-tabs {
+	// margin: 0 0 20px 0;
+	float: right;
+	.tab {
+		margin: 0 0 0 30px;
+		padding: 20px 10px;
+		color: $midnight;
+		float: right;
+		cursor: pointer;
+	}
+	.tabActive {
+		border-top: 3px solid $citrus !important;
+	}
+
+}
+
+.content {
+	width: 100%;
+	background-color: white;
+	border: 1px solid $gray-light;
+	color: $midnight;
+	font-size: $font-size-base;
+}
+
+.content-assets,
+.content-description {
+	padding: 25px 50px;
+}
+
+.content-description {
+	background-color: $gray-lightest;
+}

@@ -1,0 +1,53 @@
+/*
+** Swatch
+*/
+
+.swatches-container {
+  overflow: auto;
+}
+.swatch-container {
+  margin: 0 .25em 1em 0;
+  float: left;
+}
+.swatch {
+  width: 6em;
+  height: 6em;
+}
+.swatch-primary {
+  width: 16em;
+}
+.swatch-secondary {
+  width: 12em;
+}
+.swatch-primary,
+.swatch-secondary {
+  margin: 0 1em 0 0;
+}
+
+// Builds square swatches from a number-keyed hash of colors.
+@mixin make-swatches($colors) {
+    @each $color in $colors {
+      & .#{nth($color, 2)} {
+        background-color: #{nth($color, 1)};
+      }
+    }
+}
+
+// Primary colors
+$colors: (
+  ($blue, blue),
+  ($teal, teal),
+  ($citrus, citrus),
+  ($midnight, midnight)
+);
+
+// Make primary color classes
+@include make-swatches($colors);
+
+.labels-container {
+  font-size: $font-size-small;
+  margin: .5em 0 0 0;
+}
+.label {
+  margin: .25em 0 0 0; 
+}

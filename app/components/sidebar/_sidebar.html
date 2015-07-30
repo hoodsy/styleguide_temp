@@ -1,0 +1,31 @@
+<div class="sidebar" 
+		 ng-if="routes">
+
+	<!-- Section Nav -->
+	<ul class="nav">
+		<li ng-repeat="route in routes.sections">
+			<a ng-click="vm.activeSection(route.section)"
+				 ui-sref-active="sidebar-active" 
+				 ui-sref="{{ routes.state | toSubstate }}.{{ route.section | toSubstate }}">
+				{{ route.section }}
+			</a>
+
+			<!-- Subsection Nav -->
+			<!-- Displayed if parent is active -->
+			<ul class="sub-nav"
+					ng-init="vm.inSubsection = route.subsections[0]"
+					ng-if="vm.inSection === route.section">
+				<li ng-repeat="subsection in route.subsections">
+					<a href="#{{ subsection | toSubstate }}" 
+						 ng-click="vm.activeSubsection(subsection)"
+						 ng-class="{subsectionActive: vm.inSubsection === subsection }">
+						{{ subsection }}
+					</a>
+				</li>
+			</ul>
+			<!-- End Subsection Nav -->
+			
+		</li>
+	</ul>
+	<!-- End Section Nav -->
+</div>
