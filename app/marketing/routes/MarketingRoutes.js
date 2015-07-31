@@ -1,6 +1,6 @@
 'use strict';
 
-var ComponentsModule = require('../_index');
+var MarketingModule = require('../_index');
 
 /**
  * @desc
@@ -15,15 +15,19 @@ var ComponentsModule = require('../_index');
  *
  * @ngInject
  */
-function UIDesignRoutes() {
+function MarketingRoutes() {
 
   var service = {
-    state: 'UI Design',
+    state: 'Marketing',
     
     sections: [
       { 
         section: 'Introduction',
-        subsections: []
+        subsections: [
+          'Intro1',
+          'Intro2',
+          'Intro3'
+        ]
       },
       {
         section: 'Logo',
@@ -31,7 +35,11 @@ function UIDesignRoutes() {
       },
       {
         section: 'Colors',
-        subsections: []
+        subsections: [
+          'Primary',
+          'Gray Scale',
+          'Signaling'
+        ]
       },
       {
         section: 'Typography',
@@ -44,4 +52,4 @@ function UIDesignRoutes() {
 
 }
 
-ComponentsModule.factory('UIDesignRoutes', UIDesignRoutes);
+MarketingModule.factory('MarketingRoutes', MarketingRoutes);

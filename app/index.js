@@ -32,9 +32,9 @@ angular.element(document).ready(function() {
 
   // angular.module('app').constant('AppSettings', require('./constants'));
 
-  angular.module('app').config(require('./config/routes'));
-
-  angular.module('app').run(require('./config/state'));
+  var config = require('./config/config')
+  angular.module('app').config(config.Routes);
+  angular.module('app').run(config.State);
 
   angular.bootstrap(document, ['app']);
 

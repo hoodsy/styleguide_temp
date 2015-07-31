@@ -15,7 +15,7 @@ var ComponentsModule = require('../_index');
  *
  * @ngInject
  */
-function RoutesService(GuidelinesRoutes, UIDesignRoutes, MarketingRoutes, $stateProvider) {
+function RoutesService(GuidelinesRoutes, UIDesignRoutes, MarketingRoutes) {
 
   var service = {};
 
@@ -36,16 +36,19 @@ function RoutesService(GuidelinesRoutes, UIDesignRoutes, MarketingRoutes, $state
 
     // Format routes object to be state compatible
     var ctrl, stateFormat, template, url, statePath;
+
+    // Sections
     if (isSection) {
       topState = topState.toLowerCase()
       var path = topState + '/components/';
 
       stateFormat = routes.section.toLowerCase();
       statePath = topState + '.' + stateFormat;
-      ctrl = null;
+      ctrl = routes.section + 'Ctrl as ' + stateFormat;
       url = '/' + topState + '/' + stateFormat;
       template = path + stateFormat + '/_' + stateFormat + '.html';
     }
+    // Top level states
     else {
       stateFormat = routes.toLowerCase();
       statePath = stateFormat;
