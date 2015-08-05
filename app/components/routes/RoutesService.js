@@ -44,7 +44,9 @@ function RoutesService(GuidelinesRoutes, UIDesignRoutes, MarketingRoutes) {
 
       stateFormat = routes.section.toLowerCase();
       statePath = topState + '.' + stateFormat;
-      ctrl = routes.section + 'Ctrl as ' + stateFormat;
+      // no controller for subsections at this point
+      // ctrl = routes.section + 'Ctrl as ' + stateFormat;
+      ctrl = null;
       url = '/' + topState + '/' + stateFormat;
       template = path + stateFormat + '/_' + stateFormat + '.html';
     }

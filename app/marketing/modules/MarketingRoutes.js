@@ -17,16 +17,15 @@ var MarketingModule = require('../_index');
  */
 function MarketingRoutes() {
 
+  var defaultTabs = ['Examples', 'Downloads', 'Usage'];
+
   var service = {
     state: 'Marketing',
     
     sections: [
-      { 
+      {
         section: 'Introduction',
         subsections: [
-          'Intro1',
-          'Intro2',
-          'Intro3'
         ]
       },
       {
@@ -36,14 +35,17 @@ function MarketingRoutes() {
       {
         section: 'Colors',
         subsections: [
-          'Primary',
-          'Gray Scale',
-          'Signaling'
+          {title: 'Primary', tabs: defaultTabs},
+          {title: 'Gray Scale', tabs: defaultTabs},
+          {title: 'Signaling', tabs: defaultTabs}
         ]
       },
       {
         section: 'Typography',
-        subsections: []
+        subsections: [
+          {title: 'Fonts', tabs: defaultTabs},
+          {title: 'Font Sizes', tabs: defaultTabs}
+        ]
       }
     ]
   };

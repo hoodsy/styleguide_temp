@@ -1,6 +1,6 @@
 'use strict';
 
-var MarketingModule = require('../../_index');
+var UIDesignModule = require('../../_index');
 
 /**
  * @ngInject
@@ -8,7 +8,7 @@ var MarketingModule = require('../../_index');
 function ColorsService() {
 
   var service = {};
-  var path = 'marketing/components/colors/';
+  var path = 'uidesign/components/colors/';
 
   service.primary = {
   	title: 'Primary',
@@ -52,4 +52,4 @@ function ColorsService() {
 
 }
 
-MarketingModule.factory('ColorsService', ColorsService);
+UIDesignModule.factory('ColorsService', ColorsService);

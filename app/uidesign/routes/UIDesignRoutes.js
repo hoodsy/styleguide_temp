@@ -18,24 +18,24 @@ var ComponentsModule = require('../_index');
 function UIDesignRoutes() {
 
   var service = {
-    state: 'UI-Design',
+    state: 'UIDesign',
     
     sections: [
       { 
         section: 'Introduction',
-        subsections: []
-      },
-      {
-        section: 'Logo',
-        subsections: []
+        subsections: [
+          'Intro1',
+          'Intro2',
+          'Intro3'
+        ]
       },
       {
         section: 'Colors',
-        subsections: []
-      },
-      {
-        section: 'Typography',
-        subsections: []
+        subsections: [
+          'Primary',
+          'Gray Scale',
+          'Signaling'
+        ]
       }
     ]
   };

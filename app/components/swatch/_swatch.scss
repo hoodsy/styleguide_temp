@@ -26,11 +26,11 @@
 
 // Builds square swatches from a number-keyed hash of colors.
 @mixin make-swatches($colors) {
-    @each $color in $colors {
-      & .#{nth($color, 2)} {
-        background-color: #{nth($color, 1)};
-      }
+  @each $color in $colors {
+    & .#{nth($color, 2)} {
+      background-color: #{nth($color, 1)};
     }
+  }
 }
 
 // Primary colors

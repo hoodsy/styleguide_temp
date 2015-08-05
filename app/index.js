@@ -8,7 +8,7 @@ require('angular-ui-router');
 // Angular Modules
 require('./templates');
 require('./guidelines/_index');
-require('./ui-design/_index');
+require('./uidesign/_index');
 require('./marketing/_index');
 require('./components/_index');
 
@@ -21,8 +21,8 @@ angular.element(document).ready(function() {
 
     // Angular Modules
     'templates',
-    // 'app.guidelines',
-    'app.ui-design',
+    'app.guidelines',
+    'app.uidesign',
     'app.marketing',
     'app.components'
   ];

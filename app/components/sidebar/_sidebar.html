@@ -13,13 +13,13 @@
 			<!-- Subsection Nav -->
 			<!-- Displayed if parent is active -->
 			<ul class="sub-nav"
-					ng-init="vm.inSubsection = route.subsections[0]"
+					ng-init="vm.inSubsection = route.subsections[0].title"
 					ng-if="vm.inSection === route.section">
 				<li ng-repeat="subsection in route.subsections">
-					<a href="#{{ subsection | toSubstate }}" 
-						 ng-click="vm.activeSubsection(subsection)"
-						 ng-class="{subsectionActive: vm.inSubsection === subsection }">
-						{{ subsection }}
+					<a href="#{{ subsection.title | toSubstate }}" 
+						 ng-click="vm.activeSubsection(subsection.title)"
+						 ng-class="{subsectionActive: vm.inSubsection === subsection.title }">
+						{{ subsection.title }}
 					</a>
 				</li>
 			</ul>

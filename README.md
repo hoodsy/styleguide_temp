@@ -29,7 +29,7 @@ app
 |
 | marketing
 |
-| ui-design
+| uidesign
 	| +- _index.html
 	| +- _index.js
 	| +- _index.scss
