@@ -26,6 +26,7 @@ function MarketingRoutes() {
       {
         section: 'Introduction',
         subsections: [
+          {title: 'Intro', tabs: defaultTabs},
         ]
       },
       {

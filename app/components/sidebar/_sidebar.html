@@ -18,7 +18,7 @@
 				<li ng-repeat="subsection in route.subsections">
 					<a href="#{{ subsection.title | toSubstate }}" 
 						 ng-click="vm.activeSubsection(subsection.title)"
-						 ng-class="{subsectionActive: vm.inSubsection === subsection.title }">
+						 ng-class="{'subsectionActive-{{$root.$state.current.name | toState}}': vm.inSubsection === subsection.title}">
 						{{ subsection.title }}
 					</a>
 				</li>

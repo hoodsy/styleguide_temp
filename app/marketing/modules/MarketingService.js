@@ -32,13 +32,6 @@ function MarketingService (MarketingRoutes, SectionService) {
 
 	return service;
 
-	// Call service createContent function with obj props
-	// TODO: abstract to service (this makes it difficult in factory)
-	// function createContent () {
-	//   this.content = create(path, this.title, this.tabs);
-	//   return this;
-	// }
-
 }
 
 MarketingModule.factory('MarketingService', MarketingService);

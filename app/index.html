@@ -19,7 +19,7 @@
       Navbar Component
       TODO: split into standalone component
    -->
-  <nav class="navbar {{ $state.current.name | toState }}" ng-class="{{$state.current.name}}">
+  <nav class="navbar {{ $state.current.name | toState }}-background">
     <a ui-sref="root"><img class="navbar-logo" src="images/logo.svg"></a>
     <ul class="nav">
       <li>
@@ -51,5 +51,8 @@
   
 
   <script src="js/main.js"></script>
+  <!-- Font Scripts -->
+  <script src="//use.typekit.net/hrf0wzt.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
 </body>
 </html>

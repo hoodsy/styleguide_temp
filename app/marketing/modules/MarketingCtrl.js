@@ -24,8 +24,6 @@ function MarketingCtrl (MarketingRoutes, MarketingService, $state) {
 		vm.inSection = section;
 	};
 
-	console.log($state.current)
-
 }
 
 MarketingModule.controller('MarketingCtrl', MarketingCtrl);

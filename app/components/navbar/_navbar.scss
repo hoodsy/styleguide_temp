@@ -42,6 +42,8 @@
   	color: white;
   	text-decoration: none;
   	text-transform: uppercase;
+    font-size: $font-size-large;
+    font-weight: 300;
   }
 
 	/*
@@ -60,12 +62,12 @@
 
 }
 
-.marketing {
+.marketing-background {
 	background-color: $citrus;
 }
-.uidesign {
-	background-color: $blue;
-}
-.guidelines {
+.uidesign-background {
 	background-color: $teal;
+}
+.guidelines-background {
+	background-color: $blue;
 }

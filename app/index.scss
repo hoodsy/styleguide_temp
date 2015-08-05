@@ -9,3 +9,12 @@ body {
   font-family: $font-family-base;
   background-color: rgba(0, 42, 58, 0.05);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-family-heading;
+}
