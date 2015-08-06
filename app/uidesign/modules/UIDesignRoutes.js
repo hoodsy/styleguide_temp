@@ -17,6 +17,8 @@ var ComponentsModule = require('../_index');
  */
 function UIDesignRoutes() {
 
+  var defaultTabs = ['API', 'Code', 'Usage'];
+
   var service = {
     state: 'UIDesign',
     
@@ -24,17 +26,14 @@ function UIDesignRoutes() {
       { 
         section: 'Introduction',
         subsections: [
-          'Intro1',
-          'Intro2',
-          'Intro3'
         ]
       },
       {
-        section: 'Colors',
+        section: 'Buttons',
         subsections: [
-          'Primary',
-          'Gray Scale',
-          'Signaling'
+          {title: 'Basic', tabs: defaultTabs},
+          {title: 'Vertical', tabs: defaultTabs},
+          {title: 'Grouped', tabs: defaultTabs}
         ]
       }
     ]

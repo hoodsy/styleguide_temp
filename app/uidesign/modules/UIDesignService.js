@@ -1,6 +1,6 @@
 'use strict';
 
-var MarketingModule = require('../_index');
+var UIDesignModule = require('../_index');
 
 /**
  * @name
@@ -8,16 +8,16 @@ var MarketingModule = require('../_index');
  * 
  * @ngInject
  */
-function MarketingService (MarketingRoutes, SectionService) {
+function UIDesignService (UIDesignRoutes, SectionService) {
 
 	var service = {};
 	var create = SectionService.createContent;
 
-	angular.forEach(MarketingRoutes.sections, function(routes){
+	angular.forEach(UIDesignRoutes.sections, function(routes){
 		var sectionTitle = routes.section.replace(' ', '').toLowerCase();
 		service[sectionTitle] = {};
 		service[sectionTitle].title = sectionTitle;
-		var path = 'marketing/components/' + sectionTitle + '/';
+		var path = 'uidesign/components/' + sectionTitle + '/';
 
 		angular.forEach(routes.subsections, function(subsection){
 			var subsectionTitle = subsection.title.replace(' ', '').toLowerCase();
@@ -32,4 +32,4 @@ function MarketingService (MarketingRoutes, SectionService) {
 
 }
 
-MarketingModule.factory('MarketingService', MarketingService);
+UIDesignModule.factory('UIDesignService', UIDesignService);
