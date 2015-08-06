@@ -47,11 +47,17 @@
 /*
 ** ui.router state styling
 */
-.sidebar-active {
+.sectionActive {
 	font-weight: bold;
 	color: $midnight;
 }
 
-.subsectionActive {
+.marketing-subsectionActive {
 	border-left: 3px solid $citrus !important;
+}
+.uidesign-subsectionActive {
+	border-left: 3px solid $teal !important;
+}
+.guidelines-subsectionActive {
+	border-left: 3px solid $blue !important;
 }
