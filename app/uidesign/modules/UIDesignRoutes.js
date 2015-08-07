@@ -37,9 +37,9 @@ function UIDesignRoutes() {
         ]
       },
       {
-        section: 'Dropdowns',
+        section: 'Inputs',
         subsections: [
-          {title: 'Select', tabs: defaultTabs, component: 'duiDropdownDirective.html'},
+          {title: 'Dropdown', tabs: defaultTabs, component: 'duiDropdownDirective.html'},
         ]
       }
     ]
