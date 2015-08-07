@@ -93,7 +93,7 @@
   box-shadow: none;
 }
 
-
+// Temporary Files
 .dev-demo {
   .dui-dropdown-container {
     border-bottom-color: $blue;
@@ -134,13 +134,19 @@
   .dui-dropdown .btn-default-focus {
     color: $blue;
   }
+  .dui-dropdown .ui-select-placeholder, 
+  .dui-dropdown .text-muted .dui-dropdown .ui-select-search {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .dui-dropdown .ui-select-choices {
+    list-style-type: none;
+    position: absolute;
+    top: 30px;
+    left: -35px;
+    background-color: #fff;
+  }
 
 }
 
-// Temporary styles
-
-.dui-dropdown .ui-select-choices {
-  list-style-type: none;
-  position: absolute;
-  left: -40px;
-}
