@@ -1,0 +1,13 @@
+
+{% block body %}
+<!-- {% for name, item in doc %}
+	{$ name $}, {$ item $}
+{% endfor %} -->
+<h2>{$ doc.id $}</h2>
+
+<!-- <h2>{$ doc.params $}</h2> -->
+
+<p>{$ doc.description $}</p>
+
+{$ doc.parent $}
+{% endblock %}

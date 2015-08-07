@@ -24,7 +24,7 @@ function UIDesignService (UIDesignRoutes, SectionService) {
 			service[sectionTitle][subsectionTitle] = {};
 			service[sectionTitle][subsectionTitle].title = subsectionTitle;
 			service[sectionTitle][subsectionTitle].tabs = subsection.tabs;
-			service[sectionTitle][subsectionTitle].content = create(path, subsectionTitle, subsection.tabs);
+			service[sectionTitle][subsectionTitle].content = create(path, subsectionTitle, subsection);
 		});
 	});
 

@@ -40,6 +40,11 @@ module.exports = {
     'dest': 'build/markdown'
   },
 
+  'dgeni': {
+    'src': '../../docs/config',
+    'dest': 'build/dgeni'
+  },
+
   'gzip': {
     'src': 'build/**/*.{html,xml,json,css,js,js.map}',
     'dest': 'build/',

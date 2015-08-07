@@ -1,0 +1,146 @@
+.dui-dropdown-container {
+  position: relative;
+  border-bottom: 1px solid white;
+  height: 54px;
+
+  & input {
+    outline: none;
+  }
+}
+
+.dui-dropdown-container .fontify-icon {
+  position: absolute;
+  font-size: 32px;
+  left: 0;
+  bottom: 0;
+}
+
+.dui-dropdown {
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  width: 90%;
+  display: inline-block;
+}
+
+.dui-dropdown .ui-select-toggle {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  box-shadow: none;
+  display: inline-block;
+  font-size: inherit;
+  float: left;
+  // Truncate styles
+  // @extend .truncate;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.dui-dropdown .ui-select-placeholder,
+.dui-dropdown .text-muted {
+  color: white;
+  font-size: $font-size-h3;
+}
+
+.dui-dropdown .form-control {
+  text-transform: none;
+  padding: 0;
+  height: auto;
+}
+
+.dui-dropdown .dropdown-menu {
+  border: 0;
+}
+
+.dui-dropdown .ui-select-match-text {
+  width: 90%;
+}
+
+.dui-dropdown .ui-select-search,
+.dui-dropdown .ui-select-search:focus {
+  background-color: transparent;
+  font-size: $font-size-h2;
+  font-family: $font-family-base;
+  color: white;
+  border: 0;
+  box-shadow: none;
+}
+
+// We need separate rules for each browser or the whole group would be ignored by all browsers.
+.dui-dropdown .ui-select-search::-webkit-input-placeholder {
+  font-size: $font-size-h3;
+}
+
+.dui-dropdown .ui-select-search::-moz-placeholder {
+  font-size: $font-size-h3;
+}
+
+.dui-dropdown .ui-select-search:-ms-input-placeholder {
+  font-size: $font-size-h3;
+}
+
+.dui-dropdown .btn-default-focus {
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  outline-offset: 0;
+  outline: none;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+
+.dev-demo {
+  .dui-dropdown-container {
+    border-bottom-color: $blue;
+    height: 24px;
+    width: 350px;
+  }
+
+  .dui-dropdown-container .fontify-icon {
+    font-size: 20px;
+    color: $blue;
+  }
+
+  .dui-dropdown {
+    left: 30px;
+  }
+
+  .dui-dropdown .ui-select-toggle {
+    color: $blue;
+  }
+
+  .dui-dropdown .ui-select-placeholder,
+  .dui-dropdown .text-muted {
+    color: $blue;
+    font-size: 20px;
+  }
+
+  .dui-dropdown .form-control {
+    padding: 0;
+    height: auto;
+  }
+
+  .dui-dropdown .ui-select-search,
+  .dui-dropdown .ui-select-search:focus {
+    font-size: 20px;
+    color: $blue;
+  }
+
+  .dui-dropdown .btn-default-focus {
+    color: $blue;
+  }
+
+}
+
+// Temporary styles
+
+.dui-dropdown .ui-select-choices {
+  list-style-type: none;
+  position: absolute;
+  left: -40px;
+}

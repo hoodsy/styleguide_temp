@@ -4,6 +4,7 @@ var angular = require('angular');
 
 // Dependencies
 require('angular-ui-router');
+// require('angular-ui-select');
 
 // Angular Modules
 require('./templates');
@@ -18,6 +19,7 @@ angular.element(document).ready(function() {
   var requires = [
     // Dependencies
     'ui.router',
+    'ui.select',
 
     // Angular Modules
     'templates',

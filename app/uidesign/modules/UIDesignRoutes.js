@@ -35,6 +35,12 @@ function UIDesignRoutes() {
           {title: 'Vertical', tabs: defaultTabs},
           {title: 'Grouped', tabs: defaultTabs}
         ]
+      },
+      {
+        section: 'Dropdowns',
+        subsections: [
+          {title: 'Select', tabs: defaultTabs, component: 'duiDropdownDirective.html'},
+        ]
       }
     ]
   };
