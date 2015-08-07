@@ -1,13 +1,61 @@
+<style type="text/css">
+	.api-row {
+		/*background-color: red;*/
+	}
+	.api-row-header {
+		color: #808080;
+		padding-right: 20px;
+	}
+	.api-row-header > th {
+		font-weight: 600;
+		font-size: 1.1em;
+		font-family: "ff-din-web-condensed", sans-serif;
+	}
+	.api-row-item {
+		padding-right: 20px;
+	}
+</style>
 
 {% block body %}
 <!-- {% for name, item in doc %}
 	{$ name $}, {$ item $}
 {% endfor %} -->
-<h2>{$ doc.id $}</h2>
 
-<!-- <h2>{$ doc.params $}</h2> -->
 
+<h1>{$ doc.id $}</h1>
+
+<h3>Description</h3>
 <p>{$ doc.description $}</p>
+
+<table>
+	<tr align="left" class="api-row-header">
+		<th>Parameter</th>
+		<th>Type</th>
+		<th>Description</th>
+	</tr>
+
+{% if doc.params %}
+<!-- <h3>Attributes</h3>
+<ul> -->
+{% for param in doc.params %}
+<!-- <li>
+  <strong>{$ param.name $}</strong> {{$ param.typeList $}} - {$ param.description $}
+</li> -->
+
+	<tr class="api-row">
+		<td class="api-row-item">{$ param.name $}</td>
+		<td class="api-row-item">{{$ param.typeList $}}</td>
+		<td class="api-row-item">{$ param.description $}</td>
+	</tr>
+
+
+{% endfor %}
+<!-- </ul> -->
+{% endif %}
+</table>
+
+<!-- <h3>Description</h3>
+<p>{$ doc.description $}</p> -->
 
 {$ doc.parent $}
 {% endblock %}

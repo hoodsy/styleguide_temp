@@ -10,7 +10,7 @@ module.exports = new Package('dgeni-example', [
 ])
 
 
-.config(function(log, readFilesProcessor, writeFilesProcessor) {
+.config(function(log, readFilesProcessor, extractTagsProcessor, writeFilesProcessor) {
 
   log.level = 'info';
 
@@ -18,6 +18,10 @@ module.exports = new Package('dgeni-example', [
   readFilesProcessor.sourceFiles = [
     { include: 'app/components/**/*.js', basePath: 'app' }
   ];
+
+  // extractTagsProcessor.tagExtractor = [
+  //   { include: 'app/components/**/*.js', basePath: 'app' }
+  // ];
 
   writeFilesProcessor.outputFolder  = 'build/dgeni';
 

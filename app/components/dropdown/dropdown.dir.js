@@ -3,9 +3,15 @@
 var ComponentsModule = require('../_index');
 
 /**
- * 
- * This is my API doc, in the js. more description
  *
+ * @description An input field that accepts a search string and renders a list of selectable options accordingly.
+ *
+ * @param getOptions {function} returns a promise which resolves to the options array
+ * @param model {object} the object that persists the selected option
+ * @param label {string} the property name of the option object that will be displayed
+ * @param placeholder {string} the placeholder text of the dropdown
+ * @param icon {string} the icon that will appear next to the dropdown
+ * 
  * @ngInject
  */
 function duiDropdownDirective () {
@@ -16,11 +22,11 @@ function duiDropdownDirective () {
     controller: 'duiDropdownController',
     controllerAs: 'vm',
     scope: {
-      getOptions: '=', // a function that returns a promise which resolves to the options array
-      model: '=', // the object that persists the selected option
-      label: '@?optionProperty', // the property name of the option object that will be displayed
-      placeholder: '@?', // the placeholder text of the dropdown
-      icon: '@?' // the icon that will appear next to the dropdown
+      getOptions: '=',
+      model: '=',
+      label: '@?optionProperty',
+      placeholder: '@?',
+      icon: '@?'
     }
   };
 
