@@ -12,7 +12,7 @@ function DuiDropdownController ($scope, $log, $q) {
   vm.refresh = refresh;
   vm.options = undefined;
 
-  $scope.$on('$destroy', destroyHandler);
+  // $scope.$on('$destroy', destroyHandler);
 
   function refresh (search) {
 
