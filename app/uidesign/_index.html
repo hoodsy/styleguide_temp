@@ -1,7 +1,7 @@
 <sidebar routes="uidesign.sidebar"></sidebar>
 
 <!-- Section View -->
-<section class="section" 
+<section class="section container" 
 	ng-repeat="section in uidesign"
 	ng-if="section.title === $state.current.name.split('.')[1]">
 
@@ -13,5 +13,5 @@
 		tabs="subsection.tabs"
 		content="subsection.content">
 	</subsection>
-
+ 
 </section>
