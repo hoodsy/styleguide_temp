@@ -7,6 +7,7 @@ var config = {};
  */
 config.Routes = function ($stateProvider, $locationProvider, $urlRouterProvider) {
 
+  // Routes config
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
   config.stateRef = $stateProvider;
