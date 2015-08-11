@@ -17,18 +17,31 @@ var data = {
 	      	tabs: defaultTabs
 	      },
 	      {
+	      	title: 'Charts',
+	      	tabs: defaultTabs
+	      },
+	      {
 	      	title: 'Gray Scale',
 	      	tabs: defaultTabs
 	      },
 	      {
-	      	title: 'Signaling',
+	      	title: 'Status',
 	      	tabs: defaultTabs
 	      }
 	    ]
 	  },
 	  {
 	    section: 'Typography',
-	    subsections: []
+	    subsections: [
+	    	{
+	    		title: 'Typeface',
+	    		tabs: defaultTabs
+	    	},
+	    	{
+	    		title: 'Paragraph',
+	    		tabs: defaultTabs
+	    	}
+	    ]
 	  }
 	]
 };
