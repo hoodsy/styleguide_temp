@@ -10,32 +10,56 @@ $shade-2: 35%;
 // -- Primary Palette
 // --- Blue
 $blue: #199ed9;
-$blue-darker: darken($blue, $shade-2);
-$blue-dark: darken($blue, $shade-1);
-$blue-light: lighten($blue, $shade-1);
-$blue-lighter: lighten($blue, $shade-2);
+$blue-dark: #2167AD;
+$blue-light: #45B9FE;
+$blue-lighter: #81CFFF;
 
 // -- Secondary Palette
 // --- Teal
 $teal: #54c0c0;
-$blue-darker: darken($blue, $shade-2);
-$blue-dark: darken($blue, $shade-1);
-$blue-light: lighten($blue, $shade-1);
-$blue-lighter: lighten($blue, $shade-2);
+$teal-dark: #009897;
+$teal-light: #98E7DB;
+$teal-lighter: #CCF4E7;
 
 // --- Citrus
 $citrus: #bfd756;
-$citrus-darker: darken($citrus, $shade-2);
-$citrus-dark: darken($citrus, $shade-1);
-$citrus-light: lighten($citrus, $shade-1);
-$citrus-lighter: lighten($citrus, $shade-2);
+$citrus-dark: #A2BF07;
+$citrus-light: #BCE17E;
+$citrus-lighter: #D3F3AF;
+
+// --- Status
+$green: #58c990;
+$yellow: #f6d93c;
+$red: #f3523e;
 
 // --- Midnight
 $midnight: #002a3a;
-$midnight-darker: darken($midnight, 10%);
-$midnight-dark: darken($midnight, 5%);
-$midnight-light: lighten($midnight, 3%);
-$midnight-lighter: lighten($midnight, 5%);
+$midnight-dark: $midnight;
+$midnight-light: $midnight;
+$midnight-lighter: $midnight;
+$midnight-90: #1c3e4c;
+$midnight-80: #355460;
+$midnight-70: #4e6973;
+$midnight-60: #687f88;
+$midnight-50: #81949b;
+$midnight-40: #9aa9af;
+$midnight-30: #b3bec3;
+$midnight-20: #cdd4d7;
+$midnight-10: #d9dfe1;
+$midnight-5:  #e5e9eb;
+$midnight-2:  #f5f6f7;
+
+
+// -- Grayscale mapping
+$black: #000;
+$white: #fff;
+$gray-darkest: $midnight-80;
+$gray-darker: $midnight-70;
+$gray-dark: $midnight-40;
+$gray: $midnight-30;
+$gray-light: $midnight-20;
+$gray-lighter: $midnight-5;
+$gray-lightest: $midnight-2;
 
 
 // DEPRECATED?
@@ -61,7 +85,6 @@ $blue-medium-light: lighten($blue-medium, 20%);
 $blue-medium-dark: darken($blue-medium, 20%);
 
 // --- Green
-$green: #81BE41;
 $green-light: lighten($green, 20%);
 $green-dark: darken($green, 20%);
 
@@ -71,7 +94,6 @@ $green-lime-light: lighten($green-lime, 20%);
 $green-lime-dark: darken($green-lime, 20%);
 
 // --- Yellow
-$yellow: #F6D03C;
 $yellow-light: lighten($yellow, 20%);
 $yellow-dark: darken($yellow, 20%);
 
@@ -91,16 +113,7 @@ $gray-warm-dark: darken($gray-warm, $shade-1);
 $gray-warm-darker: darken($gray-warm, 30%);
 $gray-warm-darkest: darken($gray-warm, 40%);
 
-// -- Basic Colors
-$black: #000;
-$white: #fff;
-$gray-darkest: #1f1f1f;
-$gray-darker: #3f3f3f;
-$gray-dark: #606060;
-$gray: #808080;
-$gray-light: #bfbfbf;
-$gray-lighter: #d8d8d8;
-$gray-lightest: #f9f9f9;
+
 
 //=== Primary
 $brand-primary: $orange;

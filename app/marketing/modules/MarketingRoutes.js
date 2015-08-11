@@ -36,16 +36,23 @@ function MarketingRoutes() {
       {
         section: 'Colors',
         subsections: [
-          {title: 'Primary', tabs: defaultTabs},
+          {title: 'Primary', tabs: ['Usage']},
+          {title: 'Charts', tabs: defaultTabs},
           {title: 'Gray Scale', tabs: defaultTabs},
-          {title: 'Signaling', tabs: defaultTabs}
+          {title: 'Status', tabs: defaultTabs}
         ]
       },
       {
         section: 'Typography',
         subsections: [
-          {title: 'Fonts', tabs: defaultTabs},
-          {title: 'Font Sizes', tabs: defaultTabs}
+          {title: 'Typeface', tabs: defaultTabs},
+          {title: 'Paragraph', tabs: defaultTabs},
+        ]
+      },
+      {
+        section: 'Test',
+        subsections: [
+          {title: 'Subsection', tabs: defaultTabs}
         ]
       }
     ]

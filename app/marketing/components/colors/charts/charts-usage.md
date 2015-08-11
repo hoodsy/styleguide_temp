@@ -1,0 +1,1 @@
+There colors are derived from our primary palette. Use them for charts, graphs, and info graphics.
