@@ -33,12 +33,39 @@
   }
 }
 
-// Primary colors
+// Colors
 $colors: (
   ($blue, blue),
+  ($blue-dark, blue-dark),
+  ($blue-light, blue-light),
+  ($blue-lighter, blue-lighter),
+
   ($teal, teal),
+  ($teal-dark, teal-dark),
+  ($teal-light, teal-light),
+  ($teal-lighter, teal-lighter),
+
   ($citrus, citrus),
-  ($midnight, midnight)
+  ($citrus-dark, citrus-dark),
+  ($citrus-light, citrus-light),
+  ($citrus-lighter, citrus-lighter),
+
+  ($green, green),
+  ($yellow, yellow),
+  ($red, red),
+
+  ($midnight, midnight),
+  ($midnight-90, midnight-90),
+  ($midnight-80, midnight-80),
+  ($midnight-70, midnight-70),
+  ($midnight-60, midnight-60),
+  ($midnight-50, midnight-50),
+  ($midnight-40, midnight-40),
+  ($midnight-30, midnight-30),
+  ($midnight-20, midnight-20),
+  ($midnight-10, midnight-10),
+  ($midnight-5, midnight-5),
+  ($midnight-2, midnight-2)
 );
 
 // Make primary color classes
