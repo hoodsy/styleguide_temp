@@ -1,6 +1,7 @@
 'use strict';
 
 var ComponentsModule = require('../_index');
+var content = require('./UIDesignContent');
 
 /**
  * @desc
@@ -17,35 +18,7 @@ var ComponentsModule = require('../_index');
  */
 function UIDesignRoutes() {
 
-  var defaultTabs = ['API', 'Code', 'Usage'];
-
-  var service = {
-    state: 'UIDesign',
-    
-    sections: [
-      { 
-        section: 'Introduction',
-        subsections: [
-        ]
-      },
-      {
-        section: 'Buttons',
-        subsections: [
-          {title: 'Basic', tabs: defaultTabs},
-          {title: 'Vertical', tabs: defaultTabs},
-          {title: 'Grouped', tabs: defaultTabs}
-        ]
-      },
-      {
-        section: 'Inputs',
-        subsections: [
-          {title: 'Dropdown', tabs: defaultTabs, component: 'duiDropdownDirective.html'},
-        ]
-      }
-    ]
-  };
-
-  return service;
+  return content;
 
 }
 

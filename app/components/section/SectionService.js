@@ -11,7 +11,7 @@ function SectionService() {
 
   service.createContent = function (path, title, subsection) {
     title = title.replace(' ', '').toLowerCase();
-    var titlePath = path + title + '/' + title + '-';
+    var titlePath = path + title + '/';
     var contentList = [];
 
     for (var i = 0; i < subsection.tabs.length; i++) {
@@ -32,7 +32,6 @@ function SectionService() {
       };
       contentList.push(content);
     }
-
     return contentList;
   }
   return service;
