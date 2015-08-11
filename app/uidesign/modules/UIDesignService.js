@@ -22,7 +22,7 @@ function UIDesignService (UIDesignRoutes, SectionService) {
 		angular.forEach(routes.subsections, function(subsection){
 			var subsectionTitle = subsection.title.replace(' ', '').toLowerCase();
 			service[sectionTitle][subsectionTitle] = {};
-			service[sectionTitle][subsectionTitle].title = subsectionTitle;
+			service[sectionTitle][subsectionTitle].title = subsection.title;
 			service[sectionTitle][subsectionTitle].tabs = subsection.tabs;
 			service[sectionTitle][subsectionTitle].content = create(path, subsectionTitle, subsection);
 		});
