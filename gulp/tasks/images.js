@@ -9,7 +9,7 @@ var browserSync = require('browser-sync');
 
 gulp.task('images', function() {
 
-  return gulp.src(config.images.src)
+  return gulp.src(config.images.src, {base: 'app'})
     .pipe(changed(config.images.dest)) // Ignore unchanged files
     .pipe(gulpif(global.isProd, imagemin())) // Optimize
     .pipe(gulp.dest(config.images.dest))
