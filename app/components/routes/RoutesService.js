@@ -42,7 +42,7 @@ function RoutesService(GuidelinesRoutes, UIDesignRoutes, MarketingRoutes) {
       topState = topState.toLowerCase()
       var path = topState + '/components/';
 
-      stateFormat = routes.section.toLowerCase();
+      stateFormat = routes.section.replace(' ', '').toLowerCase();
       statePath = topState + '.' + stateFormat;
       // no controller for subsections at this point
       // ctrl = routes.section + 'Ctrl as ' + stateFormat;

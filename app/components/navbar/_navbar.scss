@@ -23,16 +23,19 @@
   */
   .nav {
     margin: 0 21.5% 0 20%;
+    padding: 0;
   }
 
   .nav > li {
-  	padding: 1rem 2rem 0 0;
+  	padding: 1rem 3rem 0 0;
   	float: left;
   	list-style-type: none;
   }
 
-  .navbar-active {
-		color: $midnight !important;
+  .navbarActive {
+    a {
+		  color: $midnight !important;
+    }
   }
 
   .hex-icon {

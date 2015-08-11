@@ -32,8 +32,8 @@ gulp.task('generate', function() {
 			section.subsections.forEach(function(subsection) {
 				// Make section directories if they don't exist
 				var formattedTitle = subsection.title.replace(' ', '').toLowerCase();
-				console.log(formattedTitle)
-				var path = statePath + section.section + '/' + formattedTitle;
+				var formattedSection = section.section.replace(' ', '').toLowerCase();
+				var path = statePath + formattedSection + '/' + formattedTitle;
 				mkdirp(path, function (err) {
 
 					if (err) console.log(err);
