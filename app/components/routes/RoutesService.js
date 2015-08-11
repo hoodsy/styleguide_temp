@@ -47,7 +47,7 @@ function RoutesService(GuidelinesRoutes, UIDesignRoutes, MarketingRoutes) {
       // no controller for subsections at this point
       // ctrl = routes.section + 'Ctrl as ' + stateFormat;
       ctrl = null;
-      url = '/' + topState + '/' + stateFormat;
+      url = '/' + stateFormat;
       template = path + stateFormat + '/_' + stateFormat + '.html';
     }
     // Top level states

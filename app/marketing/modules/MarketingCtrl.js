@@ -3,8 +3,8 @@
 var MarketingModule = require('../_index');
 
 /**
- * @name
- * @desc
+ *  MarktingCtrl
+ * 
  * 
  * @ngInject
  */
@@ -15,14 +15,18 @@ function MarketingCtrl (MarketingRoutes, MarketingService, $state) {
 		vm[section.title] = section
 	});
 
-	vm.sidebar = MarketingRoutes;
-
 	// TODO: remove section checking duplication
 	// (also lives in sidebar scope)
 	vm.inSection = $state.current.name.split('.')[1];
 	vm.activeSection = function (section) {
 		vm.inSection = section;
 	};
+
+	init();
+
+	function init() {
+		vm.sidebar = MarketingRoutes;
+	}
 
 }
 

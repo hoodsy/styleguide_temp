@@ -11,7 +11,7 @@
 	h1,
 	h2,
 	h3 {
-		color: $gray-light;
+		color: $gray;
 	}
 }
 
@@ -27,9 +27,9 @@
 */
 .subsection {
 	width: 100%;
-	margin: 50px 0 0 0;
+	margin: ($line-height-computed * 2) 0 0 0;
 	padding: 0 0 50px 0;
-	border-top: 1px solid $gray-light;
+	border-top: 1px solid $gray-lighter;
 }
 
 .subsection-header {
@@ -57,10 +57,6 @@
 		float: right;
 		cursor: pointer;
 	}
-	.tabActive {
-		border-top: 3px solid $citrus !important;
-	}
-
 }
 
 .content {
@@ -78,4 +74,14 @@
 
 .content-description {
 	background-color: $gray-lightest;
+}
+
+.marketing-tabActive {
+	border-top: 3px solid $citrus !important;
+}
+.uidesign-tabActive {
+	border-top: 3px solid $teal !important;
+}
+.guidelines-tabActive {
+	border-top: 3px solid $blue !important;
 }

@@ -1,6 +1,17 @@
 <sidebar routes="uidesign.sidebar"></sidebar>
 
-<section class="section">
-  <!-- Section View -->
-  <div ui-view></div>
+<!-- Section View -->
+<section class="section container" 
+	ng-repeat="section in uidesign"
+	ng-if="section.title === $state.current.name.split('.')[1]">
+
+	<h1 class="section-header">{{ section.title }}</h1>
+	<!-- TODO: fix ng-if preventing duplicate, empty subsection -->
+	<subsection ng-repeat="subsection in section"
+		ng-if="subsection.title"
+	  title="subsection.title"
+		tabs="subsection.tabs"
+		content="subsection.content">
+	</subsection>
+ 
 </section>

@@ -10,7 +10,7 @@
 			<p class="tab"
 				 ng-repeat="tab in tabs"
 			   ng-click="vm.activeTab(tab)"
-				 ng-class="{tabActive: vm.inTab === tab}">
+				 ng-class="{'{{$root.$state.current.name | toState}}-tabActive': vm.inTab === tab}">
 				{{ tab }}
 			</p>
 		</div>

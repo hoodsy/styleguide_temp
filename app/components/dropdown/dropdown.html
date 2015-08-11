@@ -1,0 +1,16 @@
+<div class="dui-dropdown-container">
+  <i class="fontify-icon fontify-{{icon}}"></i>
+  <ui-select
+    class="dui-dropdown"
+    ng-model="model.currentSelection">
+      <ui-select-match placeholder="{{placeholder}}">
+        <span dui-truncate ng-bind="$select.selected.{{label}}"></span>
+      </ui-select-match>
+      <ui-select-choices
+        repeat="option in vm.options"
+        refresh="vm.refresh($select.search)"
+        refresh-delay="0">
+        <div dui-truncate ng-bind="option.{{label}}"></div>
+      </ui-select-choices>
+  </ui-select>
+</div>

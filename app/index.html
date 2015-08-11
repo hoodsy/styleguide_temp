@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
 
+  <!-- HighlightJS -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/github.min.css">
   <!-- Fontastic -->
   <link href="https://fontastic.s3.amazonaws.com/q3XbZVqTMGwGBcap5rtsJC/icons.css" rel="stylesheet">
   <!-- App Styles -->
@@ -23,31 +25,35 @@
     <a ui-sref="root"><img class="navbar-logo" src="images/logo.svg"></a>
     <ul class="nav">
       <li>
-        <i class="fontify-hexagon"></i>
+        <!-- <i class="fontify-hexagon"></i> -->
+        <i class="hex-icon"></i>
         <a ui-sref="guidelines" 
           ui-sref-active="navbar-active">
           Our Brand
         </a>
       </li>
       <li>
-        <i class="fontify-hexagon"></i>
-        <a ui-sref="uidesign"
+        <i class="hex-icon"></i>
+        <a ui-sref="uidesign.introduction"
           ui-sref-active="navbar-active">
           UI Design
         </a>
       </li>
       <li>
-        <i class="fontify-hexagon"></i>
+        <i class="hex-icon"></i>
         <a ui-sref="marketing.introduction"
           ui-sref-active="navbar-active">
           Marketing
         </a>
       </li>
     </ul>
-    <input class="search-bar" type="text"/>
+    <!-- <input class="search-bar" type="text"/> -->
+    <!-- <i class="fontify-search"></i> -->
   </nav>
 
-  <div ui-view></div>
+  <ng-include src="dgeni/duiDropdownDirective.html" scope="" onload=""></ng-include>
+
+  <section class="container" ui-view></section>
   
 
   <script src="js/main.js"></script>

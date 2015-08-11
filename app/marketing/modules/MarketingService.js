@@ -24,11 +24,9 @@ function MarketingService (MarketingRoutes, SectionService) {
 			service[sectionTitle][subsectionTitle] = {};
 			service[sectionTitle][subsectionTitle].title = subsectionTitle;
 			service[sectionTitle][subsectionTitle].tabs = subsection.tabs;
-			service[sectionTitle][subsectionTitle].content = create(path, subsectionTitle, subsection.tabs);
+			service[sectionTitle][subsectionTitle].content = create(path, subsectionTitle, subsection);
 		});
 	});
-
-	console.log(service)
 
 	return service;
 
