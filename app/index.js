@@ -20,7 +20,6 @@ angular.element(document).ready(function() {
     // Dependencies
     'ui.router',
     'ui.select',
-    // 'hljs',
 
     // Angular Modules
     'templates',
