@@ -10,6 +10,19 @@ var data = {
 	    subsections: []
 	  },
 	  {
+	    section: 'Logo',
+	    subsections: [
+	    	{
+	    		title: 'Datto Logo',
+	    		tabs: defaultTabs
+	    	},
+	    	{
+	    		title: 'Product Logos',
+	    		tabs: defaultTabs
+	    	}
+	    ]
+	  },
+	  {
 	    section: 'Colors',
 	    subsections: [
 	      {
