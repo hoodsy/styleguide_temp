@@ -34,11 +34,14 @@ app
 	| +- _index.html
 	| +- _index.js
 	| +- _index.scss
+	|
 	| components
-		| +- UIDesignCtrl.js
 		| <component name>
-	| routes
+	|
+	| modules
+		| +- UIDesignCtrl.js
 		| +- UIDesignRoutes.js
+		| +- UIDesignContent.js
 ```
 
 There are 4 main modules: Components, Guidelines, UI-Design, and Marketing.
@@ -63,14 +66,12 @@ marketing
 	| colors
 		| +- _colors.html
 		| +- _colors.scss
-		| +- ColorsCtrl.js
-		| +- ColorsService.js
 		|
 		| primary
-			| +- primary-usage.md
-			| +- primary-usage.html
-			| +- primary-downloads.html
-			| +- primary-examples.html
+			| +- usage.md
+			| +- usage.html
+			| +- downloads.html
+			| +- examples.html
 		|
 		| grayscale
 		| signaling
