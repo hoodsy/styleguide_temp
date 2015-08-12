@@ -48,7 +48,6 @@
 }
 
 .subsection-tabs {
-	// margin: 0 0 20px 0;
 	float: right;
 	.tab {
 		margin: 0 0 0 30px;
@@ -74,6 +73,11 @@
 
 .content-description {
 	background-color: $gray-lightest;
+}
+
+.assets-flex {
+	display: flex;
+	flex-direction: column;
 }
 
 .marketing-tabActive {
