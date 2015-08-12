@@ -1,16 +1,26 @@
+swatch {
+  @include flex-fill;
+}
+
 /*
 ** Swatch
 */
 
 .swatches-container {
   overflow: auto;
+  @include flex-fill;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .swatch-container {
   margin: 0 .25em 1em 0;
   float: left;
+  flex: 1;
 }
 .swatch {
-  width: 6em;
+  // width: 6em;
+  width: 100% !important;
   height: 6em;
 }
 .swatch-primary {
