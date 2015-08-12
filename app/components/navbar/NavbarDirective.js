@@ -9,8 +9,6 @@ var ComponentsModule = require('../_index');
 function NavbarDirective() {
 	return {
 		restrict: 'E',
-		controller: 'NavbarCtrl',
-		controllerAs: 'vm',
 		scope: {
 			states: '='
 		},
