@@ -1,0 +1,1 @@
+These colors should be used to convey status information in the product UI or in reports. Use green for success, yellow for warning, and red for alert.
