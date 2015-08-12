@@ -16,45 +16,13 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  
-  <!-- 
-      Navbar Component
-      TODO: split into standalone component
-   -->
-  <nav class="navbar {{ $state.current.name | toState }}-background">
-    <a ui-sref="root">
-      <img class="navbar-logo"
-        src="images/assets/images/logo.svg">
-    </a>
-    <ul class="nav">
-      <li>
-        <!-- <i class="fontify-hexagon"></i> -->
-        <i class="hex-icon"></i>
-        <a ui-sref="guidelines" 
-          ui-sref-active="navbar-active">
-          Our Brand
-        </a>
-      </li>
-      <li>
-        <i class="hex-icon"></i>
-        <a ui-sref="uidesign.introduction"
-          ui-sref-active="navbar-active">
-          UI Design
-        </a>
-      </li>
-      <li>
-        <i class="hex-icon"></i>
-        <a ui-sref="marketing.introduction"
-          ui-sref-active="navbar-active">
-          Marketing
-        </a>
-      </li>
-    </ul>
-    <!-- <input class="search-bar" type="text"/> -->
-    <!-- <i class="fontify-search"></i> -->
-  </nav>
 
-  <ng-include src="dgeni/duiDropdownDirective.html" scope="" onload=""></ng-include>
+  <navbar 
+    states="[
+      {route: 'guidelines', label: 'Our Brand'}, {route: 'uidesign', label: 'UI Design'},
+      {route: 'marketing', label: 'Marketing'}
+    ]">
+  </navbar>
 
   <section class="container" ui-view></section>
   

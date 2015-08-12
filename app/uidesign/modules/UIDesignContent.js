@@ -14,7 +14,7 @@ var data = {
     },
     {
       section: 'Inputs',
-      subsections: [
+      subsections: [ 
         {
         	title: 'Dropdown', 
         	tabs: defaultTabs, 

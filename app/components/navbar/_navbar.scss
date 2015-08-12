@@ -32,33 +32,33 @@
   	list-style-type: none;
   }
 
-  .navbarActive {
-    a {
-		  color: $midnight !important;
-    }
+  .nav > li > a {
+    padding: 0 0 0 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $font-size-medium;
+    font-weight: 300;
   }
 
   .hex-icon {
     background: url("../images/assets/images/hex-icon.svg") no-repeat center;
     padding: 15px;
   }
-  .marketing-iconActive {
-    background: url("../images/assets/images/hex-icon-active-01.svg") no-repeat center !important;
-    padding: 15px;
+
+  .navbarActive {
+    a {
+      color: $midnight !important;
+    }
+    .hex-icon {
+      background: url("../images/assets/images/hex-icon-active-01.svg") no-repeat center !important;
+      padding: 15px;
+    }
   }
 
-  .nav > li > a {
-    padding: 0 0 0 10px;
-  	color: white;
-  	text-decoration: none;
-  	text-transform: uppercase;
-    font-size: $font-size-medium;
-    font-weight: 300;
-  }
-
-	/*
-	** Search Bar
-	*/
+  /*
+  ** Search Bar
+  */
 	.search-bar {
 		width: 15em;
 		padding: 0.5rem 0;

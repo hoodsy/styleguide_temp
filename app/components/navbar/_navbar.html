@@ -1,9 +1,17 @@
-<div class="navbar">
-  <img class="navbar-logo" src="/assets/logo.svg">
-  <h1 class="navbar-brand"> | STYLEGUIDE</h1>
-  <ul class="nav">  
-    <li><a ui-sref="guidelines">Guidelines</a></li>
-    <li><a ui-sref="ui">UI Design</a></li>
-    <li><a ui-sref="marketing">Marketing</a></li>
-  </ul>
-</div>
+<nav class="navbar {{ $root.$state.current.name | toState }}-background">
+    <a ui-sref="root">
+      <img class="navbar-logo"
+        src="images/assets/images/logo.svg">
+    </a>
+    <ul class="nav">
+			<li ng-repeat="state in states"
+				ng-class="{
+					'navbarActive': $root.$state.includes(state.route)
+				}">
+				<i class="hex-icon"></i>
+				<a ui-sref="{{ state.route | toState }}">
+					{{ state.label }}
+				</a>
+			</li>
+	</ul>
+</nav>
