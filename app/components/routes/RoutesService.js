@@ -15,7 +15,7 @@ var ComponentsModule = require('../_index');
  *
  * @ngInject
  */
-function RoutesService(GuidelinesRoutes, UIDesignRoutes, MarketingRoutes) {
+function RoutesService(GuidelinesRoutes, UIDesignRoutes, MarketingRoutes, $filter) {
 
   var service = {};
 
@@ -42,7 +42,7 @@ function RoutesService(GuidelinesRoutes, UIDesignRoutes, MarketingRoutes) {
       topState = topState.toLowerCase()
       var path = topState + '/components/';
 
-      stateFormat = routes.section.replace(' ', '').toLowerCase();
+      stateFormat = $filter('toSubstate')(routes.section);
       statePath = topState + '.' + stateFormat;
       // no controller for subsections at this point
       // ctrl = routes.section + 'Ctrl as ' + stateFormat;
