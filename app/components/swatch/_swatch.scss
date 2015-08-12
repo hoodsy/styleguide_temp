@@ -7,6 +7,7 @@ swatch {
 */
 
 .swatches-container {
+  width: 100%;
   overflow: auto;
   @include flex-fill;
   flex-direction: row;
@@ -15,7 +16,6 @@ swatch {
 }
 .swatch-container {
   margin: 0 .25em 1em 0;
-  float: left;
   flex: 1;
 }
 .swatch {
