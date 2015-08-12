@@ -39,8 +39,8 @@ module.exports = {
   'images': {
     'src' : [
       'app/assets/images/**/*',
-      'app/marketing/images/**/*',
-      'app/uidesign/images/**/*',
+      'app/marketing/assets/**/*',
+      'app/uidesign/assets/**/*',
     ],
     'dest': 'build/images'
   },
