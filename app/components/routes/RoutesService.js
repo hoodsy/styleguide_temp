@@ -17,61 +17,56 @@ var ComponentsModule = require('../_index');
  */
 function RoutesService(GuidelinesRoutes, UIDesignRoutes, MarketingRoutes, $filter) {
 
-  var service = {};
+  function init () {
+    var service = {stateList: []};
+    var states = [MarketingRoutes, UIDesignRoutes, GuidelinesRoutes];
 
-  service.stateList = [];
-
-  // Use helper functions to build app states
-  service.states = [MarketingRoutes, UIDesignRoutes, GuidelinesRoutes];
-  angular.forEach(service.states, function(routes) {
-    // add top level state (e.g. Marketing)
-    service.stateList.push(buildState(routes.state, '', false));
-    
-    angular.forEach(routes.sections, function(section) {
-      service.stateList.push(buildState(section, routes.state, true));
-    })
-  });
-
-  function buildState (routes, topState, isSection) {
-
-    // Format routes object to be state compatible
-    var ctrl, stateFormat, template, url, statePath;
-
-    // Sections
-    if (isSection) {
-      topState = topState.toLowerCase()
-      var path = topState + '/components/';
-
-      stateFormat = $filter('toSubstate')(routes.section);
-      statePath = topState + '.' + stateFormat;
-      // no controller for subsections at this point
-      // ctrl = routes.section + 'Ctrl as ' + stateFormat;
-      ctrl = null;
-      url = '/' + stateFormat;
-      template = path + stateFormat + '/_' + stateFormat + '.html';
-    }
-    // Top level states
-    else {
-      stateFormat = routes.toLowerCase();
-      statePath = stateFormat;
-      ctrl = routes + 'Ctrl as ' + stateFormat;
-      url = '/' + stateFormat;
-      template = stateFormat + '/_index.html';
-    }
-
-    // Build state object
-    var stateObj = {
-      state: statePath,
-      assets: {
-        url: url,
-        controller: ctrl,
-        templateUrl: template
-      }
-    }
-    return stateObj;
+    // Use helper functions to build $stateProvider objects
+    // for states (top level) and sections
+    angular.forEach(states, function(routes) {
+      service.stateList.push(buildState(routes.state));
+      
+      angular.forEach(routes.sections, function(section) {
+        service.stateList.push(buildState(section, routes.state));
+      })
+    });
+    return service;
   }
 
-  return service;
+  // Route to helpers for a section/state $stateProvider object
+  function buildState (routes, topState) {
+    return (topState)
+      ? sectionRoute(topState, routes.section)
+      : stateRoute(routes);
+  }
+
+  // Build a section $stateProvider object
+  function sectionRoute (state, section) {
+    var formattedSection = $filter('toSubstate')(section);
+    return {
+      state: state.toLowerCase() + '.' + formattedSection,
+      assets: {
+        url: '/' + formattedSection,
+        ctrl: null,
+        templateUrl: null
+      }
+    }
+  }
+
+  // Build a state $stateProvider object
+  function stateRoute (state) {
+    var formattedState = state.toLowerCase();
+    return {
+      state: formattedState,
+      assets: {
+        url: '/' + formattedState,
+        ctrl: state + 'Ctrl as ' + formattedState,
+        templateUrl: formattedState + '/_index.html'
+      }
+    }
+  }
+
+  return init();
 }
 
 ComponentsModule.factory('RoutesService', RoutesService);
