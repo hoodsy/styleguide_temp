@@ -1,0 +1,13 @@
+```
+<div class="btn-group">
+	<button class="btn btn-default">
+		Action 1
+	</button>
+	<button class="btn btn-default">
+		Action 2
+	</button>
+	<button class="btn btn-default">
+		Action 3
+	</button>
+</div>
+```
