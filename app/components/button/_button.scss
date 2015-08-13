@@ -63,6 +63,16 @@ button {
 	}
 }
 
+.btn-vertical {
+	margin-top: -1px;
+}
+
+.btn-group {
+	button {
+		margin: -5px;
+	}
+}
+
 .btn-examples {
 	.btn {
 		margin-right: 50px;
