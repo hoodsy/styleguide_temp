@@ -26,7 +26,7 @@ function SectionService($filter) {
    * assets filepath, and description filepath.
   **/
   service.createContent = function (path, title, subsection) {
-    title = $filter('toSubstate')(title);
+    // title = $filter('toSubstate')(title);
     var titlePath = path + title + '/';
     var contentList = [];
 
@@ -40,10 +40,13 @@ function SectionService($filter) {
       else {
         description = 'markdown/' + titlePath + tab + '.html'
       }
+      var assets;
+      if (subsection.shareExample) assets = titlePath + 'example.html';
+      else assets = titlePath + tab + '.html';
 
       var content = {
         tab: subsection.tabs[i],
-        assets: titlePath + tab + '.html',
+        assets: assets,
         description: description
       };
       contentList.push(content);

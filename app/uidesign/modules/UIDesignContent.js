@@ -30,15 +30,18 @@ var data = {
       subsections: [
         {
           title: 'Primary',
-          tabs: ['Code', 'Usage']
+          tabs: ['Code', 'Usage'],
+          shareExample: true
         },
         {
           title: 'Grouped',
-          tabs: ['Code', 'Usage']
+          tabs: ['Code', 'Usage'],
+          shareExample: true
         },
         {
           title: 'Vertical',
-          tabs: ['Code', 'Usage']
+          tabs: ['Code', 'Usage'],
+          shareExample: true
         },
       ]
     },
@@ -48,7 +51,8 @@ var data = {
         {
         	title: 'Dropdown',
         	tabs: defaultTabs,
-        	component: 'duiDropdownDirective.html'
+          shareExample: true,
+          component: 'duiDropdownDirective.html'
         },
       ]
     }

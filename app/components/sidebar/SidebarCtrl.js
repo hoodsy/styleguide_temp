@@ -8,8 +8,10 @@ var ComponentsModule = require('../_index');
  * 
  * @ngInject
  */
-function SidebarCtrl () {
+function SidebarCtrl ($state) {
 	var vm = this;
+
+	initActiveSection();
 
 	vm.activeSection = function (section) {
 		vm.inSection = section;
@@ -18,6 +20,12 @@ function SidebarCtrl () {
 	vm.activeSubsection = function (subsection) {
 		vm.inSubsection = subsection;
 	};
+
+	function initActiveSection () {
+		var state = $state.current.name.split('.')[1];
+		state = state.charAt(0).toUpperCase() + state.slice(1);
+		vm.inSection = state;
+	}
 
 }
 

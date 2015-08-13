@@ -16,15 +16,12 @@ var uidesign = require(appPath+'uidesign/modules/UIDesignContent');
 gulp.task('generate', function() {
 	
 	var states = [marketing, uidesign];
+	var shareExample;
 
 	states.forEach(function(state) {
 
-		if (state.state === 'Marketing') {
-	  	var defaultTabs = ['Examples', 'Downloads', 'Usage'];
-		}
-		else {
-			var defaultTabs = ['API', 'Code', 'Usage'];
-		}
+		if (state.state === 'Marketing') shareExample = false;
+		else shareExample = true;
 
 		state.sections.forEach(function(section) {
 			var statePath = 'app/'+state.state+'/components/';
@@ -34,25 +31,23 @@ gulp.task('generate', function() {
 				var formattedTitle = subsection.title.replace(' ', '').toLowerCase();
 				var formattedSection = section.section.replace(' ', '').toLowerCase();
 				var path = statePath + formattedSection + '/' + formattedTitle;
+				
 				mkdirp(path, function (err) {
-
 					if (err) console.log(err);
 					else {
-						// Create example html template
-						// touch(path + '/' + 'example.html');
+						// Create shared html example template
+						if (shareExample) touch(path + '/example.html');
+
+						// Create markdown / html files for each tab
 						subsection.tabs.forEach(function(tab) {					
-							// Create new markdown files
 							tab = tab.toLowerCase();
 							if (tab != 'api') touch(path + '/' + tab + '.md');
-							touch(path + '/' + tab + '.html');
+							if (!shareExample) touch(path + '/' + tab + '.html');
 						});
 					}
 				});
 			});
 		});
-		
 	})
-
-
 });
 
