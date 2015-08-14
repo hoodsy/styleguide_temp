@@ -1,7 +1,24 @@
+<!-- <div class="uidesign-bg"
+	ng-if="$state.current.name == 'uidesign'">
+
+	<section class="brand-intro">
+		<h1>
+			Build Faster
+		</h1>
+		<h2>
+			Empower your UI with reusable, plug and play  components. Cut development time while improving design consistency across Datto's family of user interfaces.
+		</h2>
+		<a href="/uidesign/colors"
+			class="btn btn-default">
+			Get Started
+		</a>
+	</section>
+</div> -->
+
 <sidebar routes="uidesign.sidebar"></sidebar>
 
 <!-- Section View -->
-<section class="section container" 
+<section class="section container"
 	ng-repeat="section in uidesign"
 	ng-if="section.title === $state.current.name.split('.')[1]">
 
