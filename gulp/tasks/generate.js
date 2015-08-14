@@ -16,12 +16,10 @@ var uidesign = require(appPath+'uidesign/modules/UIDesignContent');
 gulp.task('generate', function() {
 	
 	var states = [marketing, uidesign];
-	var shareExample;
-
 	states.forEach(function(state) {
 
-		if (state.state === 'Marketing') shareExample = false;
-		else shareExample = true;
+		if (state.state === 'Marketing') var shareExample = false;
+		else var shareExample = true;
 
 		state.sections.forEach(function(section) {
 			var statePath = 'app/'+state.state+'/components/';
@@ -36,6 +34,7 @@ gulp.task('generate', function() {
 					if (err) console.log(err);
 					else {
 						// Create shared html example template
+						console.log(shareExample, path)
 						if (shareExample) touch(path + '/example.html');
 
 						// Create markdown / html files for each tab
