@@ -1,80 +1,50 @@
 #Datto Styleguide
 The Datto Styleguide provides design and usage guidelines for Branding, Marketing, and the UI Library.
 
-### Running
+
+## Running
+
 - use most recent version of node (at least 0.12.7)
 - npm install
 - npm install -g gulp
 - gulp dev
 
 
-### File Structure
+## Content Creation
+
+#### Step 1 - Name your sections/subsections
+Add the desired sections and subsections to the appropriate content file:
 ```
-app
-| +- index.html
-| +- index.js
-| +- index.scss
-| +- templates.js (generated on run)
-|
-| assets
-|
-| components
-	|	+- _index.js
-	|	+- _index.scss
-	|	+- _variables.scss
-		| <component name>
-|
-| config
-| 
-| guidelines
-|
-| marketing
-|
-| uidesign
-	| +- _index.html
-	| +- _index.js
-	| +- _index.scss
-	|
-	| components
-		| <component name>
-	|
-	| modules
-		| +- UIDesignCtrl.js
-		| +- UIDesignRoutes.js
-		| +- UIDesignContent.js
+app/uidesign/modules/UIDesignContent.js
+app/marketing/modules/MarketingContent.js
+app/guidelines/modules/GuidelinesContent.js
+```
+Note that files will be created upon *saving* the content file, based upon the **section/subsection** names and tabs you have created.
+
+#### Step 2 - Create your content
+Find your newly created section folder in the top level state (marketing, uidesign) that you are managing, in the **components** folder.
+
+For example:
+```
+app/uidesign/modules/components/buttons/
+app/uidesign/modules/components/buttons/primary/
+```
+Inside your new section/subsection folder you will find partial HTML and Markdown files that will be embedded in your new section:
+```
+example.html 
+<tabname>.md
+```
+The **example.html** file will be rendered as the example for all of your tabs when editing in UI Design. Marketing has a more flexible template system in which you are given an html template per tab, similar to your markdown files. Simply edit these HTML and Markdown partials, and they will be piped into your section! 
+
+Also, feel free to add stylesheets for your templates inside your section folder, but note that when using scss your stylesheet **must be included** in the state's index stylesheet:
+```
+app/uidesign/_index.scss
 ```
 
-There are 4 main modules: Components, Guidelines, UI-Design, and Marketing.
-
-Each of these modules follow a similar structure, with the index files serving as a shell for the underlying sections. In this way, each of the 4 main modules are bundled and included in the top level app module, with any and all dependencies included in each module.
-
-Each main module's content is structured according to sections.
-For example, Marketing has the section Colors, with subsections Primary, Gray Scale, and Signaling.
-
+#### Step 3 - Reload
+Finally, when creating new folders and files, you will need to **restart the server:** 
 ```
-marketing
-| +- _index.html
-| +- _index.js
-| +- _index.scss
-|
-| components
-|
-	| introduction
-	|
-	| logo
-	|
-	| colors
-		| +- _colors.html
-		| +- _colors.scss
-		|
-		| primary
-			| +- usage.md
-			| +- usage.html
-			| +- downloads.html
-			| +- examples.html
-		|
-		| grayscale
-		| signaling
-	|
-	| typography
+ctrl+c to stop
+gulp dev to start
 ```
+After that, your new sections should be good to go! Any empty white sections represent your empty templates, while seeing a navbar represents the absence of a file (try restarting the server!).
