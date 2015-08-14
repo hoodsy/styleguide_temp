@@ -34,7 +34,6 @@ gulp.task('generate', function() {
 					if (err) console.log(err);
 					else {
 						// Create shared html example template
-						console.log(shareExample, path)
 						if (shareExample) touch(path + '/example.html');
 
 						// Create markdown / html files for each tab
