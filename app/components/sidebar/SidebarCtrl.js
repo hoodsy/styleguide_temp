@@ -22,9 +22,18 @@ function SidebarCtrl ($state) {
 	};
 
 	function initActiveSection () {
-		var state = $state.current.name.split('.')[1];
-		state = state.charAt(0).toUpperCase() + state.slice(1);
-		vm.inSection = state;
+		vm.inSection = isSubstate($state.current.name)
+			? stateFromSubstate($state.current.name)
+			: $state.current.name;
+	}
+
+	function stateFromSubstate (substate) {
+		var state = substate.split('.')[1];
+		return state.charAt(0).toUpperCase() + state.slice(1);
+	}
+
+	function isSubstate(state) {
+		return state.includes('.');
 	}
 
 }
