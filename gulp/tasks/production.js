@@ -7,7 +7,8 @@ gulp.task('prod', ['clean'], function(cb) {
 
   cb = cb || function() {};
 
-  global.isProd = true;
+  global.isProd = false;
+  // global.isProd = true;
 
   runSequence([
   	'generate', 
