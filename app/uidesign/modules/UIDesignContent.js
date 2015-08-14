@@ -4,10 +4,6 @@ var data = {
   state: 'UIDesign',
   
   sections: [
-    { 
-      section: 'Introduction',
-      subsections: []
-    },
     {
       section: 'Colors',
       subsections: [
