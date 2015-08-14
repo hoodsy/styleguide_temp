@@ -1,0 +1,1 @@
+Our business cards exemplify Datto's bold, open, and direct personality. The quote on the back, specific to each employee, allows their individuality to shine through. The given name is rendered in Datto Blue in sentence case whereas the family name is Teal in all caps. The order of the names should reflect the preference of the employee.

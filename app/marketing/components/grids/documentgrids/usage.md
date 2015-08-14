@@ -1,0 +1,1 @@
+Robust margins and a simple 3 x 3 layout provide the underlying structure for Datto’s materials.
