@@ -25,7 +25,7 @@ config.State = function state($state, $stateParams, $rootScope, RoutesService) {
   angular.forEach(RoutesService.stateList, function(route) {
     config.stateRef.state(route.state, {
       url: route.assets.url,
-      controller: route.assets.controller,
+      controller: route.assets.ctrl,
       templateUrl: route.assets.templateUrl
     });
   });

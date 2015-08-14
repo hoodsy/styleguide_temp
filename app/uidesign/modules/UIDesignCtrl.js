@@ -11,10 +11,8 @@ var UIDesignModule = require('../_index');
 function UIDesignCtrl (UIDesignRoutes, UIDesignService, $state) {
 	var vm = this;
 
-	angular.forEach(UIDesignService, function(section){
-		vm[section.title] = section
-	});
-
+	init();
+	
 	// TODO: remove section checking duplication
 	// (also lives in sidebar scope)
 	vm.inSection = $state.current.name.split('.')[1];
@@ -22,10 +20,11 @@ function UIDesignCtrl (UIDesignRoutes, UIDesignService, $state) {
 		vm.inSection = section;
 	};
 
-	init();
-
 	function init() {
 		vm.sidebar = UIDesignRoutes;
+		angular.forEach(UIDesignService, function(section){
+			vm[section.title] = section
+		});
 	}
 
 }

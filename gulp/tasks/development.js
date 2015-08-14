@@ -18,7 +18,7 @@ gulp.task('dev', ['clean'], function(cb) {
   	'markdown', 
   	'dgeni', 
   	'browserify'
-  	], 
+  	],
   	'watch', cb);
 
 });
