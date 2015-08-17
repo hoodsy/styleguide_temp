@@ -118,38 +118,36 @@ h1, h2, h3, h4, h5, h6 {
 ** Sidebar
 */
 /* line 5, /Users/lbernard/Documents/datto/datto_styleguide/app/components/sidebar/_sidebar.scss */
-.sidebar {
+#sidebar {
   height: 100vh;
-  float: left;
-  position: fixed;
   /*
 	** sub-nav used for sidebar subsections
 	*/ }
   /* line 10, /Users/lbernard/Documents/datto/datto_styleguide/app/components/sidebar/_sidebar.scss */
-  .sidebar .nav {
+  #sidebar .nav {
     margin: 0;
     padding: 50px 0 0 50px; }
     /* line 13, /Users/lbernard/Documents/datto/datto_styleguide/app/components/sidebar/_sidebar.scss */
-    .sidebar .nav li {
+    #sidebar .nav li {
       padding: 0 0 25px 0; }
   /* line 20, /Users/lbernard/Documents/datto/datto_styleguide/app/components/sidebar/_sidebar.scss */
-  .sidebar .sub-nav {
+  #sidebar .sub-nav {
     margin: 0;
     padding: 0 0 0 0; }
     /* line 23, /Users/lbernard/Documents/datto/datto_styleguide/app/components/sidebar/_sidebar.scss */
-    .sidebar .sub-nav li {
+    #sidebar .sub-nav li {
       padding: 25px 0 0 0; }
     /* line 27, /Users/lbernard/Documents/datto/datto_styleguide/app/components/sidebar/_sidebar.scss */
-    .sidebar .sub-nav a {
+    #sidebar .sub-nav a {
       padding: 12.5px 0 12.5px 15px;
-      border-left: 1px solid #e5e9eb; }
+      border-left: 1px solid #cdd4d7; }
   /* line 34, /Users/lbernard/Documents/datto/datto_styleguide/app/components/sidebar/_sidebar.scss */
-  .sidebar .sub-nav li, .sidebar .nav li {
+  #sidebar .sub-nav li, #sidebar .nav li {
     font-size: 16px;
     color: #002a3a;
     list-style-type: none; }
   /* line 41, /Users/lbernard/Documents/datto/datto_styleguide/app/components/sidebar/_sidebar.scss */
-  .sidebar .sub-nav, .sidebar .nav a {
+  #sidebar .sub-nav, #sidebar .nav a {
     color: #002a3a;
     text-decoration: none; }
 
@@ -202,24 +200,35 @@ h1, h2, h3, h4, h5, h6 {
   margin: 48px 0 0 0;
   padding: 0 0 50px 0;
   border-top: 1px solid #cdd4d7; }
+  /* line 35, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+  .subsection a {
+    text-decoration: none;
+    color: #199ed9; }
+    /* line 38, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+    .subsection a:visited {
+      color: #199ed9; }
+    /* line 42, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+    .subsection a:active, .subsection a:hover {
+      color: #54c0c0;
+      fill: #54c0c0; }
 
-/* line 35, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+/* line 49, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
 .subsection-header {
   padding: 0 0 55px 0; }
-  /* line 39, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+  /* line 53, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
   .subsection-header h1, .subsection-header h2, .subsection-header h3 {
     text-transform: uppercase; }
 
-/* line 44, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+/* line 58, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
 .subsection-title {
   margin: 15px 0;
   font-size: 27.4288px;
   float: left; }
 
-/* line 50, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+/* line 64, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
 .subsection-tabs {
   float: right; }
-  /* line 52, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+  /* line 66, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
   .subsection-tabs .tab {
     margin: 0 0 0 30px;
     padding: 20px 10px;
@@ -227,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
     float: right;
     cursor: pointer; }
 
-/* line 61, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+/* line 75, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
 .content {
   width: 100%;
   background-color: white;
@@ -235,15 +244,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #002a3a;
   font-size: 16px; }
 
-/* line 70, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+/* line 84, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
 .content-assets, .content-description {
   padding: 25px 50px; }
 
-/* line 74, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+/* line 88, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
 .content-description {
   background-color: #f5f6f7; }
 
-/* line 78, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+/* line 92, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
 .assets-flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -262,15 +271,19 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
 
-/* line 85, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+/* line 105, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+.marketing-tabActive, .uidesign-tabActive, .guidelines-tabActive {
+  padding-top: 17px !important; }
+
+/* line 109, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
 .marketing-tabActive {
   border-top: 3px solid #bfd756 !important; }
 
-/* line 88, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+/* line 112, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
 .uidesign-tabActive {
   border-top: 3px solid #54c0c0 !important; }
 
-/* line 91, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
+/* line 115, /Users/lbernard/Documents/datto/datto_styleguide/app/components/section/_section.scss */
 .guidelines-tabActive {
   border-top: 3px solid #199ed9 !important; }
 
