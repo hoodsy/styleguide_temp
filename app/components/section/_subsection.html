@@ -1,9 +1,10 @@
 <div class="subsection"
-		 ng-init="vm.inTab = 'Usage'">
+	id='{{title | toSubstate}}'
+	ng-init="vm.inTab = 'Usage'">
 
 	<!-- Subsection header -->
 	<div class="subsection-header">
-		<h3 id='{{title | toSubstate}}' class="subsection-title">
+		<h3 class="subsection-title">
 			{{ title }}
 		</h3>
 		<div class="subsection-tabs">

@@ -30,6 +30,20 @@
 	margin: ($line-height-computed * 2) 0 0 0;
 	padding: 0 0 50px 0;
 	border-top: 1px solid $gray-light;
+
+	// Link styles
+	a {
+		text-decoration: none;
+		color: $blue;
+		&:visited {
+			color: $blue;
+		}
+		&:active,
+		&:hover {
+			color: $teal;
+			fill: $teal;
+		}
+	}
 }
 
 .subsection-header {
@@ -80,6 +94,16 @@
 	flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+}
+
+
+
+// Active section/subsection styles
+
+.marketing-tabActive,
+.uidesign-tabActive,
+.guidelines-tabActive {
+	padding-top: 17px !important;
 }
 
 .marketing-tabActive {
