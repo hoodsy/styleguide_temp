@@ -2,10 +2,10 @@
 ** Sidebar
 */
 
-.sidebar {
+#sidebar {
 	height: 100vh;
-	float: left;
-	position: fixed;
+	// float: left;
+	// position: fixed;
 
 	.nav {
 		margin: 0;
@@ -26,7 +26,7 @@
 		}
 		a { 
 			padding: 12.5px 0 12.5px 15px;
-			border-left: 1px solid $gray-lighter;
+			border-left: 1px solid $gray-light;
 		}
 	}
 	.sub-nav,
