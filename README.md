@@ -26,17 +26,17 @@ Find your newly created section folder in the top level state (marketing, uidesi
 
 For example:
 ```
-app/uidesign/modules/components/buttons/
-app/uidesign/modules/components/buttons/primary/
+app/uidesign/components/buttons/
+app/uidesign/components/buttons/primary/
 ```
 Inside your new section/subsection folder you will find partial HTML and Markdown files that will be embedded in your new section:
 ```
 example.html 
 <tabname>.md
 ```
-The **example.html** file will be rendered as the example for all of your tabs when editing in UI Design. Marketing has a more flexible template system in which you are given an html template per tab, similar to your markdown files. Simply edit these HTML and Markdown partials, and they will be piped into your section! 
+The **example.html** file will be rendered as the example for all of your tabs when editing in UI Design. Marketing has a more flexible template system in which you are given an HTML template per tab, similar to your Markdown files. Simply edit these HTML and Markdown partials, and they will be piped into your section! 
 
-Also, feel free to add stylesheets for your templates inside your section folder, but note that when using scss your stylesheet **must be included** in the state's index stylesheet:
+Also, feel free to add stylesheets for your templates inside your section folder, but note that when using SCSS your stylesheet **must be included** in the state's index stylesheet:
 ```
 app/uidesign/_index.scss
 ```
@@ -47,4 +47,4 @@ Finally, when creating new folders and files, you will need to **restart the ser
 ctrl+c to stop
 gulp dev to start
 ```
-After that, your new sections should be good to go! Any empty white sections represent your empty templates, while seeing a navbar represents the absence of a file (try restarting the server!).
+After that, your new sections should be good to go! Any empty white sections represent your empty templates, while seeing a navbar represents the absence of a file - try restarting the server!
