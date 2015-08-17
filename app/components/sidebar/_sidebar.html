@@ -5,6 +5,7 @@
 	<ul class="nav">
 		<li ng-repeat="route in routes.sections">
 			<a ng-click="vm.activeSection(route.section)"
+				ng-init="vm.activeSection(routes.sections[0].section)"
 				ui-sref-active="sectionActive" 
 				ui-sref="{{ routes.state | toSubstate }}.{{ route.section | toSubstate }}">
 				{{ route.section }}
@@ -24,7 +25,6 @@
 				</li>
 			</ul>
 			<!-- End Subsection Nav -->
-			
 		</li>
 	</ul>
 	<!-- End Section Nav -->

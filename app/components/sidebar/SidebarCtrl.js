@@ -15,6 +15,7 @@ function SidebarCtrl ($state) {
 
 	vm.activeSection = function (section) {
 		vm.inSection = section;
+		goToSection(section);
 	};
 
 	vm.activeSubsection = function (subsection) {
@@ -34,6 +35,11 @@ function SidebarCtrl ($state) {
 
 	function isSubstate(state) {
 		return state.includes('.');
+	}
+
+	function goToSection (section) {
+		if (!isSubstate($state.current.name)) 
+			$state.go($state.current.name + '.' + section.toLowerCase()); 
 	}
 
 }
